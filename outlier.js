@@ -17,12 +17,37 @@ function findOutlier (arr){
         } else {
             oddNums.push(arr[i])
         }
-        if (evenNums.length > oddNums.length){
-            return oddNums
-        } else {
-            return evenNums
-        }
+        // if (evenNums.length > oddNums.length){
+        //     return oddNums
+        // } else {
+        //     return evenNums
+        // }
+    }
+    if (evenNums.length > oddNums.length){
+        return oddNums //returns the array with 1 num in it
+    } else {
+        return evenNums //can do evenNums[0] to return the 1 num in the array
     }
 }
 
 console.log(findOutlier(nums))
+
+// joely's soln
+// function outlier(nums){
+//     let evens = [];
+//     let odds = [];
+  
+//     for(let i = 0; i < nums.length; i++){
+//       if(nums[i]%2 === 0){
+//         evens.push(nums[i])
+//       } else {
+//         odds.push(nums[i])
+//       }
+//     }
+    
+//     if(odds.length > evens.length){
+//       return evens.join('')
+//     } else {
+//       return odds.join('')
+//     }
+//   }
